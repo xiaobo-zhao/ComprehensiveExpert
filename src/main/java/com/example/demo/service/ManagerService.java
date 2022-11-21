@@ -18,4 +18,8 @@ public class ManagerService {
     public void addManager(Manager manager){
         managerMapper.addManager(manager);
     }
+    public Integer selectManager(String musername,String mpassword){
+        return managerMapper.selectManager(musername, mpassword);
+    }
+
 }
