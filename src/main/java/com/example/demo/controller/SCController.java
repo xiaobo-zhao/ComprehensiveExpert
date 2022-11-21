@@ -4,6 +4,7 @@ import com.example.demo.pojo.SCampus;
 import com.example.demo.service.SCampusService;
 import com.example.demo.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import java.util.List;
  * @Date: 2022/11/21  19:09
  */
 @RestController
+@CrossOrigin
 public class SCController {
     @Autowired
     private SCampusService sCampusService;
