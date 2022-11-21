@@ -9,6 +9,9 @@
         insert into manager_table(mid, musername, mpassword, memail)
         VALUES (#{mid}, #{musername}, #{mpassword}, #{memail})
     </insert>
+    <select id="selectManager" resultType="java.lang.Integer" parameterType="string">
+        select * from manager_table where musername = #{musername} and mpassword = #{mpassword}
+    </select>
 
 
 </mapper>
