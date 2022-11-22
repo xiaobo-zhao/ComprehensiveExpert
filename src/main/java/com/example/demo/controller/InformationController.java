@@ -24,9 +24,7 @@ public class InformationController {
     private InformationService informationService;
 
     @RequestMapping("/display")
-    public String displayInf(@RequestBody Information information) {
-        System.out.println(JSON.toJSONString(informationService.selectInf(information.getSid())));
-        return JSON.toJSONString(informationService.selectInf(information.getSid()));
-
+    public List<Information> displayInf(@RequestBody Information information) {
+        return informationService.selectInf(information.getSid());
     }
 }
